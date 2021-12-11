@@ -1,0 +1,5 @@
+[workspace]
+    memebers = [
+        "threev",
+        "threev-derive"
+    ]

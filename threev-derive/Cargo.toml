@@ -1,0 +1,39 @@
+[package]
+name = "threev-derive"
+version = "0.1.0"
+authors = ["Chris Pecunies <clp@clp.is>"]
+edition = "2021"
+publish = false
+
+[lib]
+name = "threev_derive"
+proc-macro = true
+bench = false
+
+include = [
+    "src/**/*.rs",
+    "tests/**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE.md"
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+heck = "0.4.0"
+log = "0.4.14"
+proc-macro-error = "1.0.4"
+proc-macro2 = "1.0.33"
+quote = "1.0.10"
+
+[dependencies.syn]
+version = "1.0.82"
+features = ["full", "fold", "parsing", "derive"]
+
+[features]
+default = []
+
+[[test]]
+name = "save"
+path = "tests/saves.rs"
